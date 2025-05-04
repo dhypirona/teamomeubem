@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe4f0, #ffd6ec);
+      font-family: 'Quicksand', sans-serif;
+      color: #a64d79;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #fff0f6;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(255, 192, 203, 0.4);
+      text-align: center;
+      max-width: 500px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .flower:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .flower:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+    .flower:nth-child(3) { top: 70%; left: 30%; animation-delay: 2s; }
+    .flower:nth-child(4) { top: 60%; left: 70%; animation-delay: 3s; }
+    .flower:nth-child(5) { top: 40%; left: 50%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: #ffb6c1;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffa3b5;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5937ce3a7e.mp3?filename=happy-birthday-to-you-116093.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+
+  <div class="card">
+    <h1>Feliz Aniversário!</h1>
+    <p>Gabi, saiba que todo o universo conspirou para que esse momento acontecesse. Dezoito anos é bastante coisa. <br> Que você não se cobre tanto, como fez aos dezessete, dezesseis, quinze, aos quatorze e assim vai. Sonhe alto e seja imensamente feliz, pois esse é o mínimo que você merece.</p>
+    <a href="#" class="btn">Com amor, Dhy </a>
+  </div>
+
+</body>
+</html>
