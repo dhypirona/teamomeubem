@@ -16,6 +16,34 @@
       align-items: center;
       height: 100vh;
       overflow: hidden;
+      position: relative;
+    }
+
+    .flower-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      pointer-events: none;
+    }
+
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .card {
@@ -26,6 +54,7 @@
       text-align: center;
       max-width: 500px;
       animation: fadeIn 2s ease;
+      z-index: 1;
     }
 
     h1 {
@@ -37,29 +66,6 @@
     p {
       font-size: 1.2em;
       margin-top: 0;
-    }
-
-    .flower {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .flower:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
-    .flower:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
-    .flower:nth-child(4) { top: 20%; left: 70%; animation-delay: 3s; }
-    .flower:nth-child(5) { top: 40%; left: 50%; animation-delay: 4s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .btn {
@@ -86,16 +92,18 @@
     Seu navegador não suporta áudio.
   </audio>
 
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
+  <div class="flower-container">
+    <div class="flower" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+    <div class="flower" style="top: 5%; left: 25%; animation-delay: 1s;"></div>
+    <div class="flower" style="top: 8%; left: 55%; animation-delay: 2s;"></div>
+    <div class="flower" style="top: 12%; left: 75%; animation-delay: 3s;"></div>
+    <div class="flower" style="top: 6%; left: 90%; animation-delay: 4s;"></div>
+  </div>
 
   <div class="card">
     <h1>Feliz Aniversário!</h1>
     <p>Gabi, saiba que todo o universo conspirou para que esse momento acontecesse, lembro de você aos 10 anos,
-rabo de cavalo, meio tímida mas sempre radiante. Dezoito anos é bastante coisa. <br> Que você não se cobre tanto, como fez aos dezessete, dezesseis, quinze, aos quatorze e assim vai. Sonhe alto e seja imensamente feliz, pois esse é o mínimo que você merece, eu amo você como amo a gabizinha de 10 anos.</p>
+    rabo de cavalo, meio tímida mas sempre radiante. Dezoito anos é bastante coisa. <br> Que você não se cobre tanto, como fez aos dezessete, dezesseis, quinze, aos quatorze e assim vai. Sonhe alto e seja imensamente feliz, pois esse é o mínimo que você merece, eu amo você como amo a gabizinha de 10 anos.</p>
     <a href="#" class="btn">Com amor, Dhy </a>
   </div>
 
