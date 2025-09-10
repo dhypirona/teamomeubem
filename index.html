@@ -10,7 +10,6 @@
       padding: 0;
       background: #000; /* fundo preto */
       font-family: 'Quicksand', sans-serif;
-      color: #000; /* fonte preta */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,6 +57,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -69,7 +69,6 @@
       position: absolute;
       width: 10px;
       height: 10px;
-      background-color: red;
       top: -10px;
       opacity: 0.8;
       animation: fall linear forwards;
@@ -88,11 +87,10 @@
   <div class="card">
     <h1>Feliz Aniversário!</h1>
     <p>Meu bem, fico muito contente que esteja completando 22 anos, não é todo dia que se faz essa idade (todas as idades são assim, você vai dizer) mas todas elas são importantes da mesma maneira. Quero caminhar ao seu lado e fazer o que for necessário pra te dar todo o meu amor, te dar os mais confortáveis abraços e a certeza de que em mim você sempre terá um lugar onde pode confiar. Você pode ser quem é comigo, e eu sou imensuravelmente grata por te ter.</p>
-    <a href="#" class="btn">Com amor, Dhy</a>
+    <button class="btn" onclick="startConfetti()">Com amor, Dhy</button>
   </div>
 
   <script>
-    // Função para criar confete
     function createConfetti() {
       const confetti = document.createElement("div");
       confetti.classList.add("confetti");
@@ -106,14 +104,19 @@
 
       confetti.style.animationDuration = 3 + Math.random() * 3 + "s";
 
-      // Remover confete depois da animação
       setTimeout(() => {
         confetti.remove();
       }, 6000);
     }
 
-    // Criar vários confetes ao carregar
-    setInterval(createConfetti, 150);
+    function startConfetti() {
+      let count = 0;
+      const interval = setInterval(() => {
+        createConfetti();
+        count++;
+        if (count > 100) clearInterval(interval); // quantidade de confetes
+      }, 50);
+    }
   </script>
 
 </body>
