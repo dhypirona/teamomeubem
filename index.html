@@ -8,9 +8,9 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #ffe4f0, #ffd6ec);
+      background: #000; /* fundo preto */
       font-family: 'Quicksand', sans-serif;
-      color: #a64d79;
+      color: #000; /* fonte preta */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,38 +19,16 @@
       position: relative;
     }
 
-    .flower-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 150px;
-      pointer-events: none;
-    }
-
-    .flower {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .card {
-      background: #fff0f6;
+      background: #fff; /* carta branca */
       padding: 40px;
       border-radius: 30px;
-      box-shadow: 0 10px 30px rgba(255, 192, 203, 0.4);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
       text-align: center;
       max-width: 500px;
       animation: fadeIn 2s ease;
@@ -61,11 +39,13 @@
       font-family: 'Pacifico', cursive;
       font-size: 3em;
       margin-bottom: 10px;
+      color: #000; /* título preto */
     }
 
     p {
       font-size: 1.2em;
       margin-top: 0;
+      color: #000; /* texto preto */
     }
 
     .btn {
@@ -73,7 +53,7 @@
       margin-top: 20px;
       padding: 10px 20px;
       border-radius: 20px;
-      background-color: #ffb6c1;
+      background-color: #000; /* botão preto */
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -81,7 +61,7 @@
     }
 
     .btn:hover {
-      background-color: #ffa3b5;
+      background-color: #333;
     }
 
     /* Confetti */
@@ -105,17 +85,9 @@
 </head>
 <body>
 
-  <div class="flower-container">
-    <div class="flower" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
-    <div class="flower" style="top: 5%; left: 25%; animation-delay: 1s;"></div>
-    <div class="flower" style="top: 8%; left: 55%; animation-delay: 2s;"></div>
-    <div class="flower" style="top: 12%; left: 75%; animation-delay: 3s;"></div>
-    <div class="flower" style="top: 6%; left: 90%; animation-delay: 4s;"></div>
-  </div>
-
   <div class="card">
     <h1>Feliz Aniversário!</h1>
-    <p>Meu bem, fico muito contente que esteja completando 22 anos, não é todo dia que se faz essa idade ( todas as idades são assim, você vai dizer ) mas todas elas são importantes da mesma maneira. Quero caminhar ao seu lado e fazer o que for necessário pra te dar todo o meu amor, te dar os mais confortáveis abraços e a certeza de que em mim você sempre terá um lugar onde pode confiar. Você pode ser quem é comigo, e eu sou imensurávelmente grata por te ter.</p>
+    <p>Meu bem, fico muito contente que esteja completando 22 anos, não é todo dia que se faz essa idade (todas as idades são assim, você vai dizer) mas todas elas são importantes da mesma maneira. Quero caminhar ao seu lado e fazer o que for necessário pra te dar todo o meu amor, te dar os mais confortáveis abraços e a certeza de que em mim você sempre terá um lugar onde pode confiar. Você pode ser quem é comigo, e eu sou imensuravelmente grata por te ter.</p>
     <a href="#" class="btn">Com amor, Dhy</a>
   </div>
 
